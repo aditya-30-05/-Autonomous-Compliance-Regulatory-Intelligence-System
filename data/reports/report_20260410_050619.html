@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Compliance Report – new_7c9b042ff1924bd49ffeb53b8cf990cc.pdf</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --card: #22263a;
+    --accent: #7c6af7; --accent2: #06b6d4; --text: #e2e8f0;
+    --muted: #94a3b8; --border: #2d3248;
+    --high: #ef4444; --medium: #f59e0b; --low: #22c55e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg);
+          color: var(--text); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+  /* Header */
+  .report-header { text-align: center; padding: 2.5rem 0 2rem;
+    border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+  .report-header h1 { font-size: 2rem; font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .report-header .meta { color: var(--muted); margin-top: .5rem; font-size: .9rem; }
+
+  /* Summary cards */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 1rem; margin-bottom: 2rem; }
+  .stat-card { background: var(--card); border-radius: 12px; padding: 1.25rem;
+    text-align: center; border: 1px solid var(--border); }
+  .stat-card .num { font-size: 2rem; font-weight: 800; }
+  .stat-card .lbl { color: var(--muted); font-size: .8rem; margin-top: .25rem; }
+  .stat-card.high  .num { color: var(--high); }
+  .stat-card.medium .num { color: var(--medium); }
+  .stat-card.low   .num { color: var(--low); }
+  .stat-card.total .num { color: var(--accent); }
+
+  /* Section */
+  .section { margin-bottom: 2.5rem; }
+  .section h2 { font-size: 1.2rem; font-weight: 600; color: var(--accent2);
+    border-left: 4px solid var(--accent); padding-left: .75rem;
+    margin-bottom: 1.25rem; }
+
+  /* Executive summary */
+  .exec-summary { background: var(--card); border-radius: 12px; padding: 1.5rem;
+    border: 1px solid var(--border); color: var(--text); line-height: 1.8; }
+
+  /* Change / Draft cards */
+  .card { background: var(--card); border-radius: 12px; padding: 1.25rem;
+    margin-bottom: 1rem; border: 1px solid var(--border);
+    border-left: 4px solid var(--border); }
+  .card.HIGH   { border-left-color: var(--high); }
+  .card.MEDIUM { border-left-color: var(--medium); }
+  .card.LOW    { border-left-color: var(--low); }
+  .card.NEW    { border-left-color: var(--accent); }
+
+  .badge { display: inline-block; padding: .2rem .65rem; border-radius: 9999px;
+    font-size: .72rem; font-weight: 700; letter-spacing: .05em; }
+  .badge.HIGH   { background: rgba(239,68,68,.15); color: var(--high); }
+  .badge.MEDIUM { background: rgba(245,158,11,.15); color: var(--medium); }
+  .badge.LOW    { background: rgba(34,197,94,.15); color: var(--low); }
+  .badge.ADDED  { background: rgba(34,197,94,.15); color: var(--low); }
+  .badge.REMOVED{ background: rgba(239,68,68,.15); color: var(--high); }
+  .badge.MODIFIED{ background: rgba(124,106,247,.15); color: var(--accent); }
+  .badge.NEW    { background: rgba(6,182,212,.15); color: var(--accent2); }
+
+  .card-title { font-weight: 600; margin-bottom: .5rem; }
+  .card-meta  { color: var(--muted); font-size: .82rem; margin-bottom: .75rem; }
+  .snippet    { background: var(--surface); border-radius: 8px; padding: .75rem;
+    font-size: .85rem; color: var(--muted); margin-top: .5rem;
+    border: 1px solid var(--border); white-space: pre-wrap; word-break: break-word; }
+  .draft-text { background: rgba(124,106,247,.08); border-radius: 8px; 
+    padding: .85rem; font-size: .88rem; border: 1px solid rgba(124,106,247,.25);
+    white-space: pre-wrap; word-break: break-word; margin-top: .5rem; }
+  .rationale  { color: var(--accent2); font-size: .82rem; margin-top: .5rem; 
+    font-style: italic; }
+
+  /* Risk Score Gauge */
+  .risk-gauge { display: flex; align-items: center; gap: .5rem; margin: .5rem 0; }
+  .gauge-bar { flex: 1; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; }
+  .gauge-fill { height: 100%; border-radius: 4px; transition: width .5s ease; }
+  .gauge-fill.HIGH   { background: linear-gradient(90deg, var(--high), #f87171); }
+  .gauge-fill.MEDIUM { background: linear-gradient(90deg, var(--medium), #fbbf24); }
+  .gauge-fill.LOW    { background: linear-gradient(90deg, var(--low), #4ade80); }
+  .gauge-val { font-size: .75rem; font-weight: 700; min-width: 40px; text-align: right; }
+  .breakdown-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: .5rem; margin-top: .5rem; }
+  .bd-item { background: var(--surface); padding: .5rem; border-radius: 8px; text-align: center; font-size: .72rem; }
+  .bd-item .bd-val { font-size: 1rem; font-weight: 700; }
+
+  /* Deadline */
+  .deadline-card { background: var(--card); border-radius: 12px; padding: 1rem;
+    margin-bottom: .75rem; border: 1px solid var(--border);
+    display: flex; align-items: center; gap: 1rem; }
+  .dl-days { font-size: 1.5rem; font-weight: 800; min-width: 60px; text-align: center; }
+  .dl-days.CRITICAL { color: var(--high); }
+  .dl-days.URGENT   { color: var(--medium); }
+  .dl-days.NORMAL   { color: var(--low); }
+  .dl-info { flex: 1; }
+  .dl-desc { font-weight: 600; font-size: .85rem; }
+  .dl-meta { font-size: .75rem; color: var(--muted); }
+
+  /* Explanation */
+  .explanation { background: rgba(6,182,212,.06); border: 1px solid rgba(6,182,212,.15);
+    border-radius: 8px; padding: .6rem .8rem; font-size: .78rem; color: var(--accent2);
+    margin-top: .4rem; font-style: italic; }
+
+  /* Footer */
+  footer { text-align: center; color: var(--muted); font-size: .8rem;
+    padding: 2rem 0; border-top: 1px solid var(--border); margin-top: 2rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="report-header">
+    <h1>⚖️ Compliance Intelligence Report</h1>
+    <div class="meta">
+      Document: <strong>new_7c9b042ff1924bd49ffeb53b8cf990cc.pdf</strong> &nbsp;|&nbsp;
+      Generated: <strong>2026-04-10 05:06:19</strong> &nbsp;|&nbsp;
+      Pages: <strong>1</strong>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card total">
+      <div class="num">1</div>
+      <div class="lbl">Total Changes</div>
+    </div>
+    <div class="stat-card high">
+      <div class="num">0</div>
+      <div class="lbl">High Risk</div>
+    </div>
+    <div class="stat-card medium">
+      <div class="num">0</div>
+      <div class="lbl">Medium Risk</div>
+    </div>
+    <div class="stat-card low">
+      <div class="num">1</div>
+      <div class="lbl">Low Risk</div>
+    </div>
+    <div class="stat-card total">
+      <div class="num">0</div>
+      <div class="lbl">Policies Affected</div>
+    </div>
+    <div class="stat-card total">
+      <div class="num">1</div>
+      <div class="lbl">Drafts Generated</div>
+    </div>
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="section">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Executive summary unavailable (Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}). Manual review required.</div>
+  </div>
+
+  <!-- Detected Changes -->
+  <div class="section">
+    <h2>Detected Regulatory Changes</h2>
+    
+<div class="card LOW">
+  <div class="card-title">
+    <span class="badge LOW">LOW</span>&nbsp;
+    <span class="badge REMOVED">REMOVED</span>&nbsp;
+    General
+  </div>
+  <div class="card-meta">REMOVED in 'General': RESERVE BANK OF INDIA
+Department of Regulation
+Central Office, Mumbai ? 400 001
+RBI/2023-24/98
+DOR.CAP.REC.72/21.06.201/</div>
+  <div class="risk-gauge">
+  <div class="gauge-bar"><div class="gauge-fill LOW" style="width:17.5%"></div></div>
+  <div class="gauge-val" style="color:var(--low)">17.5/100</div>
+</div>
+  <div class="breakdown-grid">
+  <div class="bd-item"><div class="bd-val">10</div>Compliance</div>
+  <div class="bd-item"><div class="bd-val">35</div>Financial</div>
+  <div class="bd-item"><div class="bd-val">10</div>Operational</div>
+  <div class="bd-item"><div class="bd-val">10</div>Reputational</div>
+</div>
+  <div class='explanation'>🔍 Risk analysis unavailable (Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.',</div>
+  <div class='snippet'><strong>Before:</strong> RESERVE BANK OF INDIA
+Department of Regulation
+Central Office, Mumbai ? 400 001
+RBI/2023-24/98
+DOR.CAP.REC.72/21.06.201/2023-24
+March 12, 2024
+All Scheduled Commercial Banks
+(Excluding Regional Rural Banks and Small Finance Banks)
+Dear Sir/Madam,
+Master Circular - Prudential Norms on Capital Adequac</div>
+  
+</div>
+  </div>
+
+  <!-- Affected Policies -->
+  <div class="section">
+    <h2>Affected Policies &amp; Analysis</h2>
+    
+<div class="card LOW">
+  <div class="card-title">General — REMOVED</div>
+  <div class="card-meta">Matched policies: <span class='badge LOW'>No policy matched</span></div>
+  <div class="snippet">[LLM unavailable] Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}</div>
+</div>
+  </div>
+
+  <!-- Suggested Updates -->
+  <div class="section">
+    <h2>Suggested Policy Updates (Drafts)</h2>
+    
+<div class="card NEW">
+  <div class="card-title">
+    <span class="badge NEW">NEW</span>&nbsp;
+    New Policy — General
+  </div>
+  <div class="card-meta">REMOVED in 'General': RESERVE BANK OF INDIA
+Department of Regulation
+Central Office, Mumbai ? 400 001
+RBI/2023-24/98
+DOR.CAP.REC.72/21.06.201/</div>
+  <div class="draft-text">[LLM unavailable: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}]</div>
+  <div class="rationale">📌 Manual review required.</div>
+</div>
+  </div>
+
+  <!-- Compliance Deadlines -->
+  <div class="section">
+    <h2>⏰ Compliance Deadlines</h2>
+    <p style='color:var(--muted)'>No deadlines extracted.</p>
+  </div>
+
+</div>
+<footer>
+  Generated by Autonomous Compliance &amp; Regulatory Intelligence System &nbsp;|&nbsp;
+  2026-04-10 05:06:19
+</footer>
+</body>
+</html>

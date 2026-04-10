@@ -1,0 +1,5 @@
+# ChromaDB persistent store directory
+# This folder is auto-created at runtime when you run:
+#   python -m utils.policy_loader
+# or call:
+#   GET /policies/load

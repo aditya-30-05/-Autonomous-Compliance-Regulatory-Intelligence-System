@@ -1,0 +1,60 @@
+RISK MANAGEMENT POLICY
+Document ID: POL-RISK-003
+Version: 1.9
+Effective Date: 01 July 2024
+Owner: Enterprise Risk Management Division
+
+1. INTRODUCTION
+The Risk Management Policy establishes the institution's framework for identifying, assessing, monitoring, and mitigating all material risks. This policy is aligned with RBI Guidelines on Risk Management, Basel III Capital Regulations, and the institution's Board-approved Risk Appetite Statement (RAS).
+
+2. RISK APPETITE STATEMENT
+2.1 The institution maintains a moderate risk appetite across credit, market, and operational risk domains.
+2.2 Risk Appetite is expressed in terms of:
+    - Maximum tolerable loan loss rate: 1.5% of total loan book
+    - Capital Adequacy Ratio (CAR): Minimum 13% (regulatory minimum: 11.5%)
+    - Liquidity Coverage Ratio (LCR): Minimum 110% (regulatory minimum: 100%)
+    - Net Stable Funding Ratio (NSFR): Minimum 105% (regulatory minimum: 100%)
+
+3. CREDIT RISK
+3.1 Credit risk is the risk of financial loss from a borrower's default.
+3.2 Exposure limits:
+    - Single borrower: Max 15% of capital funds (20% with Board approval for infrastructure)
+    - Group exposure: Max 25% of capital funds (40% with Board approval)
+3.3 Concentration risk monitored quarterly; alerts triggered at 80% of limits.
+3.4 Internal credit rating models to be validated annually by an independent party.
+
+4. MARKET RISK
+4.1 The Treasury desk operates within Board-approved Market Risk Limits.
+4.2 Value-at-Risk (VaR) calculated at 99% confidence interval, 10-day holding period.
+4.3 Interest Rate Risk in Banking Book (IRRBB): Managed per RBI guidelines; EVE sensitivity limit of 15% of Tier 1 + Tier 2 capital.
+4.4 Foreign Exchange open position limit: USD 50 million (equivalent) intraday.
+
+5. OPERATIONAL RISK
+5.1 Operational risk includes fraud, system failures, process errors, and legal risk.
+5.2 Loss data collection: All operational loss events above ₹1 lakh must be reported to Risk Management within 24 hours.
+5.3 Business Continuity Plan (BCP) tested bi-annually.
+5.4 Cyber Security framework aligned to RBI Cyber Security Framework for Banks (2016).
+5.5 Vendor/outsourcing risk: All critical outsourcing arrangements require quarterly performance review.
+
+6. LIQUIDITY RISK
+6.1 Liquidity risk managed through Daily Liquidity Monitoring Report (DLMR).
+6.2 Stress testing conducted monthly with three scenarios:
+    - Scenario A: 20% deposit outflow in 10 days
+    - Scenario B: Capital market disruption (30-day horizon)
+    - Scenario C: Combined market and idiosyncratic stress
+6.3 Contingency Funding Plan (CFP) to be updated annually and pre-approved by ALCO.
+
+7. COMPLIANCE RISK
+7.1 All new products and significant process changes require prior Compliance sign-off.
+7.2 Regulatory changes must be mapped to internal policies within 30 days of notification.
+7.3 Compliance exceptions require Senior Management approval and must be reported to the Board Risk Committee quarterly.
+
+8. CLIMATE AND ESG RISK
+8.1 The institution will assess climate-related financial risks as per RBI pilot disclosure framework.
+8.2 Financed emissions tracking to commence by FY2025.
+8.3 ESG scoring to be integrated into credit appraisal for corporate loans above ₹50 crore from FY2025.
+
+9. GOVERNANCE
+9.1 Board Risk Committee (BRC): Meets quarterly; reviews RAS compliance and material risk events.
+9.2 Risk Management Committee (Management Level): Meets monthly.
+9.3 Chief Risk Officer (CRO): Reports directly to the MD & CEO and has an independent reporting line to the BRC.

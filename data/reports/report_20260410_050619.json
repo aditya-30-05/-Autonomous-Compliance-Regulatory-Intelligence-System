@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-04-10 05:06:19",
+  "document": "new_7c9b042ff1924bd49ffeb53b8cf990cc.pdf",
+  "executive_summary": "Executive summary unavailable (Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}). Manual review required.",
+  "stats": {
+    "total_changes": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "policies_affected": 0,
+    "drafts_generated": 1
+  },
+  "all_deadlines": [],
+  "changes": [
+    {
+      "type": "REMOVED",
+      "section": "General",
+      "old": "RESERVE BANK OF INDIA\nDepartment of Regulation\nCentral Office, Mumbai ? 400 001\nRBI/2023-24/98\nDOR.CAP.REC.72/21.06.201/2023-24\nMarch 12, 2024\nAll Scheduled Commercial Banks\n(Excluding Regional Rural Banks and Small Finance Banks)\nDear Sir/Madam,\nMaster Circular - Prudential Norms on Capital Adequacy - Basel III Framework\n1. BACKGROUND\nThe Reserve Bank of India has been implementing the Basel III ",
+      "new": null,
+      "risk": "LOW",
+      "summary": "REMOVED in 'General': RESERVE BANK OF INDIA\nDepartment of Regulation\nCentral Office, Mumbai ? 400 001\nRBI/2023-24/98\nDOR.CAP.REC.72/21.06.201/",
+      "risk_score": 17.5,
+      "risk_breakdown": {
+        "compliance": 10,
+        "financial": 35,
+        "operational": 10,
+        "reputational": 10
+      },
+      "risk_reasoning": "Risk analysis unavailable (Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}). Score based on keyword analysis.",
+      "deadlines": []
+    }
+  ],
+  "mappings": [
+    {
+      "section": "General",
+      "matched_policies": [],
+      "analysis": "[LLM unavailable] Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    }
+  ],
+  "drafts": [
+    {
+      "change_summary": "REMOVED in 'General': RESERVE BANK OF INDIA\nDepartment of Regulation\nCentral Office, Mumbai ? 400 001\nRBI/2023-24/98\nDOR.CAP.REC.72/21.06.201/",
+      "policy_id": "NEW",
+      "policy_title": "New Policy — General",
+      "draft_update": "[LLM unavailable: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-svcac******************************************************************************************************************M_oH. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}]",
+      "rationale": "Manual review required.",
+      "risk": "LOW"
+    }
+  ]
+}

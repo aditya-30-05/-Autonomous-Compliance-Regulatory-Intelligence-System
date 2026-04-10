@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComplianceAI — Autonomous Regulatory Intelligence</title>
+  <meta name="description" content="AI-powered regulatory change detection, policy mapping, and compliance report generation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════ NOTIFICATION BANNER ══════ -->
+<div class="notif-banner" id="notif-banner">
+  <div class="notif-inner">
+    <span class="notif-pulse"></span>
+    <span class="notif-text">🔔 <strong>New Circular Detected:</strong> RBI/2025-26/117 — Basel III Capital Adequacy (Revised April 2025)</span>
+    <button class="notif-close" id="notif-close" aria-label="Close notification">✕</button>
+  </div>
+</div>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">
+      <div class="logo-glow"></div>
+      <svg class="logo-icon" viewBox="0 0 32 32" fill="none"><path d="M16 2L3 9v14l13 7 13-7V9L16 2z" stroke="currentColor" stroke-width="1.5" fill="rgba(99,102,241,.15)"/><path d="M16 2v28M3 9l13 7 13-7M3 23l13-7 13 7" stroke="currentColor" stroke-width="1.5" opacity=".5"/><circle cx="16" cy="16" r="4" fill="currentColor" opacity=".8"/></svg>
+      <div class="logo-text">
+        <span class="logo-name">Compliance<span class="logo-ai">AI</span></span>
+        <span class="logo-tagline">Automating Regulatory Intelligence with AI</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#upload-section" class="nav-link" data-section="upload-section">Upload</a>
+      <a href="#output-section" class="nav-link" data-section="output-section">Results</a>
+      <a href="#report-section" class="nav-link" data-section="report-section">Report</a>
+    </div>
+    <div class="nav-right">
+      <div class="api-indicator" id="api-indicator">
+        <span class="api-dot"></span>
+        <span class="api-label">Checking…</span>
+      </div>
+      <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#hero" class="mobile-link">Home</a>
+    <a href="#upload-section" class="mobile-link">Upload</a>
+    <a href="#output-section" class="mobile-link">Results</a>
+    <a href="#report-section" class="mobile-link">Report</a>
+  </div>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="hero">
+  <div class="hero-particles" id="hero-particles"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-radial"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Multi-Agent AI System · LangGraph · RAG
+    </div>
+    <h1 class="hero-title">
+      Autonomous Compliance &amp;<br/>
+      <span class="hero-gradient">Regulatory Intelligence</span>
+    </h1>
+    <p class="hero-desc">
+      Upload regulatory circulars from RBI / SEBI — our AI agent pipeline detects changes,
+      maps them to your internal policies, generates draft updates, and produces a structured compliance report.
+    </p>
+    <div class="hero-actions">
+      <a href="#upload-section" class="btn btn-glow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        Upload &amp; Analyse
+      </a>
+      <a href="#pipeline-section" class="btn btn-outline-hero">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+        View Pipeline
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label">AI Agents</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-num">4D</span><span class="hero-stat-label">Risk Scoring</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-num">RAG</span><span class="hero-stat-label">Policy Match</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-num">XAI</span><span class="hero-stat-label">Explainability</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PIPELINE (8 Agents) ══════ -->
+<section class="section pipeline-section" id="pipeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Architecture</span>
+      <h2 class="section-title">Agent Pipeline</h2>
+      <p class="section-desc">Eight specialized AI agents orchestrated by LangGraph in a stateful workflow.</p>
+    </div>
+    <div class="pipeline-track">
+      <div class="pipeline-line"><div class="pipeline-line-fill" id="pipeline-line-fill"></div></div>
+      <div class="pipeline-nodes">
+        <div class="p-node" data-agent="parser" id="pnode-parser">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">📄</div>
+            <div class="p-node-name">Parser</div>
+            <div class="p-node-desc">PDF → Text</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="diff" id="pnode-diff">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">🔍</div>
+            <div class="p-node-name">Diff</div>
+            <div class="p-node-desc">Change Detect</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="risk_scorer" id="pnode-risk_scorer">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">⚠️</div>
+            <div class="p-node-name">Risk</div>
+            <div class="p-node-desc">4D Scoring</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="mapper" id="pnode-mapper">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">🧠</div>
+            <div class="p-node-name">Mapper</div>
+            <div class="p-node-desc">RAG Match</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="explainer" id="pnode-explainer">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">💡</div>
+            <div class="p-node-name">Explainer</div>
+            <div class="p-node-desc">Transparency</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="drafter" id="pnode-drafter">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">✍️</div>
+            <div class="p-node-name">Drafter</div>
+            <div class="p-node-desc">Draft Gen</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="deadline" id="pnode-deadline">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">⏰</div>
+            <div class="p-node-name">Deadline</div>
+            <div class="p-node-desc">Date Extract</div>
+          </div>
+        </div>
+        <div class="p-node" data-agent="reporter" id="pnode-reporter">
+          <div class="p-node-ring"><div class="p-node-dot"></div></div>
+          <div class="p-node-card">
+            <div class="p-node-icon">📊</div>
+            <div class="p-node-name">Reporter</div>
+            <div class="p-node-desc">Final Report</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ UPLOAD ══════ -->
+<section class="section upload-section" id="upload-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Step 1</span>
+      <h2 class="section-title">Upload Documents</h2>
+      <p class="section-desc">Upload the new regulatory circular and optionally the previous version for comparison.</p>
+    </div>
+    <div class="upload-grid">
+      <div class="upload-card" id="drop-new">
+        <input type="file" id="input-new" accept=".pdf" hidden />
+        <div class="upload-card-inner" onclick="document.getElementById('input-new').click()"
+             ondragover="dragOver(event,'new')" ondragleave="dragLeave(event,'new')" ondrop="dropFile(event,'new')">
+          <div class="upload-icon-wrap">
+            <svg class="upload-icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="rgba(99,102,241,.08)"/>
+              <path d="M24 18v12M18 24l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="upload-label">New Circular</div>
+          <div class="upload-sublabel">Required · Drag &amp; drop or click to browse</div>
+          <div class="upload-file-badge" id="file-new">No file selected</div>
+        </div>
+        <div class="upload-card-glow"></div>
+      </div>
+
+      <div class="upload-card upload-card-secondary" id="drop-old">
+        <input type="file" id="input-old" accept=".pdf" hidden />
+        <div class="upload-card-inner" onclick="document.getElementById('input-old').click()"
+             ondragover="dragOver(event,'old')" ondragleave="dragLeave(event,'old')" ondrop="dropFile(event,'old')">
+          <div class="upload-icon-wrap">
+            <svg class="upload-icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="rgba(99,102,241,.05)"/>
+              <path d="M18 26h12M18 22h12M18 30h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+            </svg>
+          </div>
+          <div class="upload-label">Previous Version</div>
+          <div class="upload-sublabel">Optional · For change comparison</div>
+          <div class="upload-file-badge" id="file-old">No file selected</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="upload-actions">
+      <button class="btn btn-glow btn-lg" id="btn-upload" onclick="uploadFiles()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        <span id="btn-upload-text">Upload Documents</span>
+      </button>
+    </div>
+    <div class="msg" id="msg-upload"></div>
+  </div>
+</section>
+
+<!-- ══════ ACTION — RUN PIPELINE ══════ -->
+<section class="section action-section" id="action-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Step 2</span>
+      <h2 class="section-title">Run AI Analysis</h2>
+      <p class="section-desc">Trigger the multi-agent pipeline to analyse the uploaded documents.</p>
+    </div>
+
+    <div class="session-row" id="session-row" style="display:none">
+      <div class="session-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Session: <code id="session-display"></code>
+      </div>
+    </div>
+
+    <button class="btn btn-cyan btn-lg" id="btn-run" onclick="runPipeline()" disabled>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+      <span id="btn-run-text">Run AI Analysis</span>
+    </button>
+
+    <!-- Agent live log -->
+    <div class="agent-log" id="agent-log" style="display:none">
+      <div class="agent-log-item" id="log-parser"><span class="log-icon">⏳</span> Parser Agent — Extracting text…</div>
+      <div class="agent-log-item" id="log-diff"><span class="log-icon">⏳</span> Diff Agent — Detecting changes…</div>
+      <div class="agent-log-item" id="log-risk_scorer"><span class="log-icon">⏳</span> Risk Scorer — Computing 4D risk…</div>
+      <div class="agent-log-item" id="log-mapper"><span class="log-icon">⏳</span> Mapper Agent — RAG policy matching…</div>
+      <div class="agent-log-item" id="log-explainer"><span class="log-icon">⏳</span> Explainer — Generating reasoning…</div>
+      <div class="agent-log-item" id="log-drafter"><span class="log-icon">⏳</span> Drafter Agent — Generating updates…</div>
+      <div class="agent-log-item" id="log-deadline"><span class="log-icon">⏳</span> Deadline Tracker — Extracting dates…</div>
+      <div class="agent-log-item" id="log-reporter"><span class="log-icon">⏳</span> Report Agent — Building report…</div>
+    </div>
+
+    <div class="msg" id="msg-run"></div>
+  </div>
+</section>
+
+<!-- ══════ OUTPUT — RESULTS ══════ -->
+<section class="section output-section" id="output-section" style="display:none">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Step 3</span>
+      <h2 class="section-title">Analysis Results</h2>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row" id="stats-row"></div>
+
+    <!-- Output Tabs -->
+    <div class="output-tabs">
+      <button class="tab-btn active" data-tab="tab-changes" onclick="switchTab(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        Detected Changes
+      </button>
+      <button class="tab-btn" data-tab="tab-policies" onclick="switchTab(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        Affected Policies
+      </button>
+      <button class="tab-btn" data-tab="tab-drafts" onclick="switchTab(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Suggested Updates
+      </button>
+      <button class="tab-btn" data-tab="tab-deadlines" onclick="switchTab(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        ⏰ Deadlines
+      </button>
+      <button class="tab-btn" data-tab="tab-timeline" onclick="switchTab(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        Timeline
+      </button>
+    </div>
+
+    <!-- Tab panels -->
+    <div class="tab-panel active" id="tab-changes"></div>
+    <div class="tab-panel" id="tab-policies"></div>
+    <div class="tab-panel" id="tab-drafts"></div>
+    <div class="tab-panel" id="tab-deadlines"></div>
+    <div class="tab-panel" id="tab-timeline"></div>
+  </div>
+</section>
+
+<!-- ══════ REPORT ══════ -->
+<section class="section report-section" id="report-section" style="display:none">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Final Output</span>
+      <h2 class="section-title">Compliance Report</h2>
+      <p class="section-desc">Comprehensive report ready for management review.</p>
+    </div>
+    <div class="report-toolbar">
+      <button class="btn btn-outline" id="btn-view-report" onclick="viewReport()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        View Full Report
+      </button>
+      <button class="btn btn-outline" onclick="downloadReport()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download HTML
+      </button>
+      <button class="btn btn-outline" onclick="loadDemoData()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        Load Demo Data
+      </button>
+    </div>
+    <div class="report-frame-wrap" id="report-frame-wrap" style="display:none">
+      <iframe id="report-frame" title="Compliance Report"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MONITORING SIMULATION ══════ -->
+<section class="section monitor-section" id="monitor-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Live Feed</span>
+      <h2 class="section-title">Real-Time Monitoring</h2>
+      <p class="section-desc">Simulated regulatory circular detection feed.</p>
+    </div>
+    <div class="monitor-feed" id="monitor-feed"></div>
+  </div>
+</section>
+
+<!-- ══════ HISTORY ══════ -->
+<section class="section history-section" id="history-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Archive</span>
+      <h2 class="section-title">Document History</h2>
+      <p class="section-desc">Previously uploaded and analysed regulatory circulars.</p>
+    </div>
+    <div class="history-table-wrap">
+      <table class="history-table" id="history-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Date</th>
+            <th>Changes</th>
+            <th>Risk</th>
+            <th>Deadlines</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">⚖️ ComplianceAI</span>
+      <span class="footer-copy">Autonomous Regulatory Intelligence System</span>
+    </div>
+    <div class="footer-right">
+      <span class="footer-tech">FastAPI · LangGraph · ChromaDB · PyMuPDF</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

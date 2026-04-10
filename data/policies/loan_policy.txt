@@ -1,0 +1,64 @@
+LOAN POLICY — RETAIL AND CORPORATE LENDING
+Document ID: POL-LOAN-002
+Version: 2.7
+Effective Date: 01 April 2024
+Owner: Credit Risk and Retail Banking Division
+
+1. OBJECTIVE
+This policy governs the sanctioning, disbursement, monitoring, and recovery of loans across all segments: retail, MSME, agriculture, and corporate. It is aligned with the RBI Master Circular on Loans and Advances and the Bank's Credit Risk Framework.
+
+2. LOAN CATEGORIES
+2.1 Retail Loans:
+    - Home Loans (max LTV: 80% for loans up to ₹30 lakh; 75% for ₹30–75 lakh; 70% above ₹75 lakh)
+    - Personal Loans (unsecured; max ₹25 lakh; min CIBIL score: 700)
+    - Vehicle Loans (up to 85% on-road price for new vehicles)
+    - Education Loans (up to ₹75 lakh for overseas education with collateral)
+
+2.2 MSME Loans:
+    - Loans up to ₹1 crore: collateral-free under CGTMSE scheme
+    - Working capital limit: max 20% of projected annual turnover
+    - Priority Sector Lending (PSL) categorization per RBI guidelines
+
+2.3 Corporate Loans:
+    - Minimum credit rating: internal rating ≥ BBB or external rating equivalent
+    - Board approval required for exposures above ₹500 crore
+    - Consortium/Syndication arrangements as per internal policy
+
+3. CREDIT APPRAISAL
+3.1 All applications must include:
+    - Income proof (last 3 years IT returns for self-employed)
+    - Bank statements (minimum 12 months)
+    - Credit Bureau Report (CIBIL, CRIF, Equifax, or Experian)
+    - Property valuation report (certified valuers only, empaneled list)
+
+3.2 Debt-to-Income (DTI) Ratio limits:
+    - Up to ₹5 lakh annual income: max DTI 40%
+    - ₹5–15 lakh annual income: max DTI 50%
+    - Above ₹15 lakh annual income: max DTI 55%
+
+4. INTEREST RATES AND CHARGES
+4.1 All retail floating-rate loans must be linked to External Benchmark Lending Rate (EBLR), currently the RBI Repo Rate.
+4.2 Reset frequency: quarterly (mandatory per RBI circular DBOD.No.Dir.BC.88/13.03.000/2019-20)
+4.3 No pre-payment penalty on floating rate loans.
+4.4 Processing fee: maximum 1% of loan amount + applicable GST, non-refundable.
+
+5. DISBURSEMENT
+5.1 Loan must be disbursed within 7 working days of complete document submission.
+5.2 Home loan disbursements must align with construction stage (for under-construction properties).
+5.3 Direct disbursement to builder/seller accounts mandatory for property value > ₹20 lakh.
+
+6. NPA CLASSIFICATION AND PROVISIONING
+6.1 Sub-standard: Overdue 90+ days
+6.2 Doubtful: Remained NPA for 12+ months
+6.3 Loss: Identified by bank/auditors/RBI inspection
+Provisioning as per RBI IRAC norms; reviewed quarterly.
+
+7. RESTRUCTURING AND RESOLUTION
+7.1 One-time restructuring permissible for genuine business distress cases.
+7.2 All restructured accounts above ₹25 crore require independent credit audit.
+7.3 Refer MSME accounts under RBI Resolution Framework 2.0 where applicable.
+
+8. COLLECTION AND RECOVERY
+8.1 Collections must follow RBI Fair Practices Code and BCSBI guidelines.
+8.2 Recovery agents must be trained, certified, and on the approved panel.
+8.3 Legal action (SARFAESI/DRT) to be initiated for NPAs above ₹1 crore after 6 months of NPA classification.

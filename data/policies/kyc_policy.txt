@@ -1,0 +1,52 @@
+KYC POLICY — KNOW YOUR CUSTOMER
+Document ID: POL-KYC-001
+Version: 3.2
+Effective Date: 01 January 2024
+Owner: Compliance & Risk Management Division
+
+1. PURPOSE AND SCOPE
+This policy establishes the Know Your Customer (KYC) framework for all customer onboarding, periodic review, and transaction monitoring activities. It applies to all business units, branches, and subsidiaries of the organization operating under RBI Master Direction - Know Your Customer (KYC) Direction, 2016 (as amended).
+
+2. CUSTOMER IDENTIFICATION PROGRAM (CIP)
+2.1 All new customers must complete the KYC process before any account opening or financial product issuance.
+2.2 Acceptable Officially Valid Documents (OVDs) for identity verification:
+    - Aadhaar Card (as per Prevention of Money Laundering (Maintenance of Records) Rules, 2005)
+    - Passport
+    - Voter Identity Card issued by Election Commission of India
+    - Driving Licence
+    - PAN Card (mandatory for transactions above ₹50,000)
+    - NREGA Job Card signed by a State Government official
+
+2.3 For entities (corporate customers):
+    - Certificate of Incorporation
+    - Memorandum and Articles of Association
+    - Board Resolution authorizing account opening
+    - Beneficial Ownership Declaration (for entities with >25% ownership threshold)
+
+3. CUSTOMER DUE DILIGENCE (CDD)
+3.1 Standard CDD applies to all retail customers with low-risk profile.
+3.2 Simplified CDD may apply for:
+    - Accounts with annual turnover below ₹10 lakh
+    - Accounts opened under Government financial inclusion schemes
+3.3 Enhanced Due Diligence (EDD) is mandatory for:
+    - Politically Exposed Persons (PEPs) and their relatives
+    - Customers from high-risk jurisdictions (FATF non-compliant countries)
+    - Non-Resident Indians (NRIs) and foreign nationals
+    - Customers flagged by AML screening tools
+
+4. PERIODIC REVIEW SCHEDULE
+4.1 High-risk customers: Review every 12 months
+4.2 Medium-risk customers: Review every 24 months
+4.3 Low-risk customers: Review every 36 months
+4.4 Re-KYC triggers include change in address, occupation, or transaction patterns exceeding baseline thresholds.
+
+5. RECORD KEEPING
+5.1 All KYC documents must be retained for a minimum of 5 years from the date of cessation of transaction or closure of account.
+5.2 Digital copies must be stored in encrypted format with access logs.
+5.3 All records must be available for inspection by RBI and Financial Intelligence Unit India (FIU-IND) upon request.
+
+6. TRAINING AND AWARENESS
+All customer-facing staff and compliance personnel must complete KYC training within 30 days of joining and annually thereafter. Training records to be maintained by HR.
+
+7. NON-COMPLIANCE CONSEQUENCES
+Violations of this policy may result in disciplinary action, regulatory penalties under the Banking Regulation Act 1949, and/or civil or criminal proceedings. The Compliance department must be notified of any suspected KYC violations within 24 hours.
