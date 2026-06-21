@@ -17,6 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ── Application code ──────────────────────────────────────────────────────────
 COPY . .
 
+
 # ── Create runtime directories ────────────────────────────────────────────────
 RUN mkdir -p data/uploads data/reports data/policies data/demo \
              db/chroma_store frontend
