@@ -6,6 +6,7 @@
 
 ## 🏗️ Architecture
 
+
 ```
 PDF → [Parser Agent] → [Diff Agent] → [Mapper Agent (RAG)] → [Drafter Agent] → [Report Agent]
            ↓                ↓                  ↓                    ↓                ↓
