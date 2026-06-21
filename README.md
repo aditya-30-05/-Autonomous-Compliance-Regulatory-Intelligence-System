@@ -109,6 +109,7 @@ uvicorn api.main:app --reload --port 8000
 
 ### 7. Open the Frontend
 
+
 Open **`frontend/index.html`** in your browser, or navigate to `http://localhost:8000/app`.
 
 ---
